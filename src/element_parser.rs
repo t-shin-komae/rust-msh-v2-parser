@@ -41,7 +41,11 @@ impl ElementType {
             15 => {
                 let nodes: [usize; 1] = Self::to_fixed_array(node_number_list)?;
                 Ok(ElementType::Node(nodes))
-            }
+            },
+            1 => {
+                let nodes: [usize; 2] = Self::to_fixed_array(node_number_list)?;
+                Ok(ElementType::Line(nodes))
+            },
             8 => {
                 let nodes: [usize; 3] = Self::to_fixed_array(node_number_list)?;
                 Ok(ElementType::LineSecondOrder(nodes))
