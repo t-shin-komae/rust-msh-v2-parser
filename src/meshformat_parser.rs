@@ -2,9 +2,9 @@ use std::error::Error;
 pub struct MeshFormatParser;
 #[derive(Debug)]
 pub struct MeshFormat{
-    version:(usize,usize),
-    filetype:usize,
-    data_size:usize
+    pub version:(usize,usize),
+    pub filetype:usize,
+    pub data_size:usize
 }
 
 impl MeshFormatParser{

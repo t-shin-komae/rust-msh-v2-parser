@@ -27,8 +27,8 @@ impl NodePaser{
 }
 #[derive(Debug)]
 pub struct Node {
-    id: usize,
-    coord: [f64; 3],
+    pub id: usize,
+    pub coord: [f64; 3],
 }
 impl Node {
     pub fn from_line(line: &str) -> Result<Self, NodeParseError> {

@@ -22,9 +22,9 @@ impl ElementPaser{
 }
 #[derive(Debug)]
 pub struct Element {
-    id: usize,
-    element: ElementType,
-    tags: [usize; 3],
+    pub id: usize,
+    pub element: ElementType,
+    pub tags: [usize; 3],
 }
 #[derive(Debug)]
 pub enum ElementType {

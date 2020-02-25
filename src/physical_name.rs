@@ -27,9 +27,9 @@ impl PhysicalNameParser {
 }
 #[derive(Debug)]
 pub struct PhysicalName {
-    dimension: usize,
-    tag: usize,
-    name: String,
+    pub dimension: usize,
+    pub tag: usize,
+    pub name: String,
 }
 impl PhysicalName {
     pub fn from_line(line: &str) -> Result<Self, PhysicalNameParseError> {
