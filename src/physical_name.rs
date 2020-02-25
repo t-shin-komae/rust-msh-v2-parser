@@ -22,7 +22,7 @@ impl PhysicalNameParser {
         Ok((elements, &lines[num_elements + 3..]))
     }
     pub fn is_end(nextline: &str) -> bool {
-        nextline == "$PhysicalNames"
+        nextline == "$EndPhysicalNames"
     }
 }
 #[derive(Debug)]
