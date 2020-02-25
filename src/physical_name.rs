@@ -46,7 +46,7 @@ impl PhysicalName {
         Ok(Self {
             dimension: dimemsion,
             tag: tag,
-            name: name.to_owned(),
+            name: quoted_string::strip_dquotes(name).ok_or(PhysicalNameParseError)?.to_owned()
         })
     }
 }

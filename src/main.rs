@@ -8,7 +8,7 @@ fn main() -> Result<(),Box<dyn Error>>{
     let mut buf_reader = BufReader::new(file);
     let mut contents = String::new();
     buf_reader.read_to_string(&mut contents)?;
-    let mut lines:Vec<&str> = contents.split('\n').collect();
+    let mut lines:Vec<&str> = contents.lines().collect();
     // let (version,rest) = MeshFormatParser::parse_meshformat(&lines)?;
     // let (physical_name,rest) = PhysicalNameParser::parse(&lines)?;
     // let (nodes,rest) = NodePaser::parse(rest)?;
